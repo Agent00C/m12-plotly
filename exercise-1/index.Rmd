@@ -3,8 +3,7 @@
 output: html_document
 ---
 
-```{r, echo=FALSE}
-install.packages("plotly")
+```{r, echo=FALSE, message=FALSE}
 library("plotly")
 
 df <- read.csv("https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv")
