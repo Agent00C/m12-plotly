@@ -1,0 +1,19 @@
+---
+output: html_document
+---
+
+```{r, echo=FALSE, message=FALSE}
+
+library(plotly)
+
+USPersonalExpenditure <- data.frame("Categorie"=rownames(USPersonalExpenditure), USPersonalExpenditure)
+data <- USPersonalExpenditure[,c('Categorie', 'X1960')]
+
+plot_ly(data, labels = ~Categorie, values = ~X1960, type = 'pie') %>%
+  layout(title = 'United States Personal Expenditures by Categories in 1960',
+         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+
+```
+
+##Check out this super awesome pie chart
